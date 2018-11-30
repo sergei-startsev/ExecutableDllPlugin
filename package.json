@@ -1,0 +1,8 @@
+{
+  "name": "ExecutableDllPlugin",
+  "version": "0.1.0",
+  "description": "Execute DllPlugin bundle code",
+  "main": "index.js",
+  "author": "Sergei Startsev",
+  "license": "MIT"
+}
