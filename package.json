@@ -3,6 +3,28 @@
   "version": "0.1.0",
   "description": "Execute DllPlugin bundle code",
   "main": "lib/index.js",
-  "author": "Sergei Startsev",
-  "license": "MIT"
+  "scripts": {
+    "pretty": "prettier ./lib/**/*.js --list-different",
+    "lint": "eslint ./"
+  },
+  "repository": "https://github.com/sergei-startsev/ExecutableDllPlugin",
+  "keywords": [
+    "DllPlugin",
+    "DllReferencePlugin",
+    "webpack",
+    "code-splitting"
+  ],
+  "author": "sergei-startsev <ai@programist.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergei-startsev/ExecutableDllPlugin/issues"
+  },
+  "homepage": "https://github.com/sergei-startsev/ExecutableDllPlugin",
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "prettier": "^1.15.3"
+  }
 }
