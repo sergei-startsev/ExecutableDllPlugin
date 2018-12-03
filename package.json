@@ -1,6 +1,6 @@
 {
   "name": "executable-dll-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Execute DllPlugin bundle code",
   "main": "lib/index.js",
   "scripts": {
@@ -8,6 +8,9 @@
     "lint": "eslint ./"
   },
   "repository": "https://github.com/sergei-startsev/ExecutableDllPlugin",
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "DllPlugin",
     "DllReferencePlugin",
