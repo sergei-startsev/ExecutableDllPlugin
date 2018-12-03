@@ -1,0 +1,1 @@
+console.log('Module C is executed');
