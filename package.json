@@ -1,6 +1,6 @@
 {
   "name": "executable-dll-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Execute DllPlugin bundle code",
   "main": "lib/index.js",
   "scripts": {
