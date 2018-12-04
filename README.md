@@ -2,11 +2,17 @@
 
 ## Install
 
-`$ npm install ExecutableDllPlugin`
+Install with `yarn`:
+
+`yarn add executable-dll-plugin --dev`
+
+With `npm`:
+
+`npm install executable-dll-plugin --save-dev`
 
 ## Motivation
 
-[DllPlugin](https://webpack.js.org/plugins/dll-plugin/) cannot be configured to meet both requirements: a) bundle shared modules and b) run these modules. That is, it is impossible for a DllPlugin bundle to execute code when it is imported via a script tag into the page.
+[DllPlugin](https://webpack.js.org/plugins/dll-plugin/) webpack plugin cannot be configured to meet both requirements: a) bundle shared modules and b) run these modules. That is, it is impossible for a DllPlugin bundle to execute code when it is imported via a script tag into the page.
 
 `ExecutableDllPlugin` allows you to execute an entrypoint module(s) included to a DllPlugin bundle.
 
@@ -15,6 +21,8 @@
 Add `ExecutableDLLPlugin` to webpack configuration next to `DllPlugin`:
 
 ```diff
++ const ExecutableDllPlugin = require('executable-dll-plugin');
+//...
 output: {
   //...
   library: 'MyLibrary'
