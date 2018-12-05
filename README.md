@@ -40,7 +40,7 @@ By default all entry modules are run, if you would like to execute a particular 
 
 ```js
 new ExecutableDllPlugin({
-  execute: ['./src/A.js']
+  execute: [path.resolve(__dirname, './src/A.js')]
 })
 ```
 
