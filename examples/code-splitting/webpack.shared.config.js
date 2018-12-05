@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExecutableDLLPlugin = require('../../lib');
+const ExecutableDllPlugin = require('../../lib');
 
 module.exports = {
   mode: 'development',
@@ -15,6 +15,6 @@ module.exports = {
       name: 'MyLibrary',
       path: path.join(__dirname, 'dist', 'manifest.json')
     }),
-    new ExecutableDLLPlugin()
+    new ExecutableDllPlugin()
   ]
 };

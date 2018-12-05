@@ -18,7 +18,7 @@ With `npm`:
 
 ## API
 
-Add `ExecutableDLLPlugin` to webpack configuration next to `DllPlugin`:
+Add `ExecutableDllPlugin` to webpack configuration next to `DllPlugin`:
 
 ```diff
 + const ExecutableDllPlugin = require('executable-dll-plugin');
@@ -32,14 +32,14 @@ plugins: [
     name: 'MyLibrary',
     path: path.join(__dirname, 'manifest.json')
   }),
-+ new ExecutableDLLPlugin()
++ new ExecutableDllPlugin()
 ]
 ```
 
 By default all entry modules are run, if you would like to execute a particular entrypoint(s), you could specify it via plugin options:
 
 ```js
-new ExecutableDLLPlugin({
+new ExecutableDllPlugin({
   execute: ['./src/A.js']
 })
 ```
