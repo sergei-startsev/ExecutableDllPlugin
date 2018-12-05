@@ -15,6 +15,8 @@ module.exports = {
       name: 'MyLibrary',
       path: path.join(__dirname, 'dist', 'manifest.json')
     }),
-    new ExecutableDllPlugin({ execute: ['./src/B.js'] })
+    new ExecutableDllPlugin({
+      execute: [path.resolve(__dirname, './src/B.js')]
+    })
   ]
 };
