@@ -52,5 +52,25 @@ The idea is to call `__webpack_require__` for each `entry` during webpack bootst
 ['0','./src/A.js','./src/B.js','./src/C.js'].forEach(__webpack_require__);
 ```
 
+## Execution Order
+If your modules are sensitive to execution order, you might want to use [optimization.moduleIds](https://webpack.js.org/configuration/optimization/#optimization-moduleids) webpack option to produce a stable call order for both `dev` and `prod` modes.
+
+```diff
++ const ExecutableDllPlugin = require('executable-dll-plugin');
+//...
+output: {
+  //...
+  library: 'MyLibrary'
+},
++ optimization: { moduleIds: 'natural' },
+plugins: [
+  new DllPlugin({
+    name: 'MyLibrary',
+    path: path.join(__dirname, 'manifest.json')
+  }),
++ new ExecutableDllPlugin()
+]
+```
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)
