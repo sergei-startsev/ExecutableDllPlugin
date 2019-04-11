@@ -44,6 +44,16 @@ new ExecutableDllPlugin({
 })
 ```
 
+For more advanced filtering, you can supply a callback function that will be run on each module to determine if that module's entrypoint should be executed:
+
+```js
+new ExecutableDllPlugin({
+  filter: m => {
+    return [path.resolve(__dirname, './src/A.js')].includes(m.resource)
+  }
+})
+```
+
 ## How it works
 
 The idea is to call `__webpack_require__` for each `entry` during webpack bootstrapping, e.g.:
