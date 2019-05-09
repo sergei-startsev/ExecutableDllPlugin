@@ -38,6 +38,16 @@ plugins: [
 
 By default all entry modules are run, if you would like to execute a particular entrypoint(s), you could specify it via plugin options:
 
+use `filter` option for advanced filtering:
+```js
+const executableModules = [path.resolve(__dirname, './src/A.js')];
+new ExecutableDllPlugin({
+  filter: m => executableModules.includes(m.identifier())
+})
+```
+
+or `execute` option to list particular modules:
+
 ```js
 new ExecutableDllPlugin({
   execute: [path.resolve(__dirname, './src/A.js')]
@@ -71,6 +81,10 @@ plugins: [
 + new ExecutableDllPlugin()
 ]
 ```
+
+## Examples
+
+See [specific-entrypoints](https://github.com/sergei-startsev/ExecutableDllPlugin/tree/master/examples/specific-entrypoints) and [code-splitting](https://github.com/sergei-startsev/ExecutableDllPlugin/tree/master/examples/code-splitting) examples for more details.
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)
